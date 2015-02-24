@@ -12,6 +12,7 @@
 		<p>Place (drag) each note card on top of its matching letter card below.</p>
 		<div id="note-game-content">
 		
+			<!--set of images used for default setting-->
 			<div id="defaultCardPile" class="hidden">
 				<img data-title="C" src="/static/img/C4Front.png" />
 		    	<img data-title="D" src="/static/img/D4Front.png" />
@@ -19,9 +20,30 @@
 		    	<img data-title="F" src="/static/img/F4Front.png" />
 		    	<img data-title="G" src="/static/img/G4Front.png" />
 			</div>
+			
+			<!--set of images used for lines-only setting-->
+			<div id="linesCardPile" class="hidden">
+				<img data-title="C" src="/static/img/C4Front.png" />
+		    	<img data-title="E" src="/static/img/E4Front.png" />
+		    	<img data-title="G" src="/static/img/G4Front.png" />
+		    	<img data-title="B" src="/static/img/B4Front.png" />
+		    	<img data-title="F" src="/static/img/F5Front.png" />
+			</div>
+			
+			<!--set of images used for spaces-only setting-->
+			<div id="spacesCardPile" class="hidden">
+				<img data-title="D" src="/static/img/D4Front.png" />
+				<img data-title="F" src="/static/img/F4Front.png" />
+				<img data-title="A" src="/static/img/A4Front.png" />
+				<img data-title="C5" src="/static/img/C5Front.png" />
+				<img data-title="E5" src="/static/img/E5Front.png" />
+			</div>
+			
 		    
+		    <!--this is top div, set of cards with notes showing, populated by init()-->
 		    <div id="cardPile"></div>
 		    
+		    <!--this is the set of letter cards that will be shown for first round-->
 		    <div id="defaultCardSlots" class="hidden">
 			    <img data-title="C" src="/static/img/C.png" />
 		    	<img data-title="D" src="/static/img/D.png" />
@@ -30,12 +52,35 @@
 		    	<img data-title="G" src="/static/img/G.png" />
 			</div>
 		    
+		    <!--this is the set of letter cards that will be shown for lines-only setting-->
+		    <div id="linesCardSlots" class="hidden">
+			    <img data-title="C" src="/static/img/C.png" />
+		    	<img data-title="E" src="/static/img/E.png" />
+			    <img data-title="G" src="/static/img/G.png" />
+			    <img data-title="B" src="/static/img/B.png" />
+			    <img data-title="F" src="/static/img/F.png" />
+			</div>
+			
+			<!--this is the set of letter cards that will be shown for spaces-only setting-->
+		    <div id="spacesCardSlots" class="hidden">
+			    <img data-title="D" src="/static/img/D.png" />
+		    	<img data-title="F" src="/static/img/F.png" />
+			    <img data-title="A" src="/static/img/A.png" />
+			    <img data-title="C5" src="/static/img/C.png" />
+			    <img data-title="E5" src="/static/img/E.png" />
+			</div>
+
+
+		    <!--this is lower div, set of cards with letters showing, populated by init()-->
 		    <div id="cardSlots"></div>
 		
 		  <div id="successMessage">
 		       <h2 id="correct">All correct!</h2>
-		       <button type="button" id="note-game-button" onclick="init()">Play Again</button>
-		 </div>
+		  </div>
+		  
+		  <button type="button" id="lines-button" onclick="lines()">Line Notes</button>
+		  <button type="button" id="default-button" onclick="init()">Default Notes</button>
+		  <button type="button" id="spaces-button" onclick="spaces()">Space Notes</button>
 	   </div>
 	</div>
 

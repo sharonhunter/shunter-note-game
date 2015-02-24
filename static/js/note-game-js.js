@@ -1,6 +1,11 @@
+//$(document).ready(function(){
+
 var correctCards = 0;
 
+
 $(init);
+$(lines);
+$(spaces);
 
 
 (function($){
@@ -70,6 +75,7 @@ function handleCardDrop(event, ui){
 	  }
    }
 
+
 function init(){
 	$('#cardPile').empty();
 	$('#cardSlots').empty();
@@ -78,14 +84,54 @@ function init(){
 	$('#cardPile img').shuffle();
 	setUpDrag();
 	correctCards = 0;
+
 	//hide success message initially
-    $('#successMessage').hide();
+	
+$('#successMessage').hide();
     $('#successMessage').css({
         left: '580px',
         top:'250px',
         width:0,
         height:0
     });
-    
-} //end of entire init function
+}
 
+//end of entire init function
+
+
+function lines(){
+	$('#cardPile').empty();
+	$('#cardSlots').empty();
+	$('#linesCardPile img').clone().appendTo('#cardPile');
+	$('#linesCardSlots img').clone().appendTo('#cardSlots');
+	$('#cardPile img').shuffle();
+	setUpDrag();
+	correctCards = 0;
+	$('#successMessage').hide();
+    $('#successMessage').css({
+        left: '580px',
+        top:'250px',
+        width:0,
+        height:0
+    });
+} //end of lines function
+
+
+function spaces(){
+	$('#cardPile').empty();
+	$('#cardSlots').empty();
+	$('#spacesCardPile img').clone().appendTo('#cardPile');
+	$('#spacesCardSlots img').clone().appendTo('#cardSlots');
+	$('#cardPile img').shuffle();
+	setUpDrag();
+	correctCards = 0;
+	$('#successMessage').hide();
+    $('#successMessage').css({
+        left: '580px',
+        top:'250px',
+        width:0,
+        height:0
+    });
+}//end of spaces function
+
+//});
