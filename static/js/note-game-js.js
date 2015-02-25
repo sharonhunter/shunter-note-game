@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	
-	//var correctCards = 0;
-	//display default game on page load
+	//display default game on page load (C,D,E,F,G)
 	$(init);
 	
 	//shuffle plugin from http://james.padolsey.com/javascript/shuffling-the-dom/
@@ -37,7 +36,17 @@ $(document).ready(function() {
 			drop: handleCardDrop
 		});
 	}
-
+		
+	function hideSuccessMessage(){
+		$('#successMessage').hide();
+		$('#successMessage').css({
+			left: '580px',
+			top: '250px',
+			width: 0,
+			height: 0
+		});
+	}
+	
 	function handleCardDrop(event, ui) {
 		var slotLetter = $(this).attr('data-title');
 		var cardLetter = ui.draggable.attr('data-title');
@@ -72,15 +81,8 @@ $(document).ready(function() {
 		$('#cardPile img').shuffle();
 		setUpDrag();
 		correctCards = 0;
-		//hide success message initially
-		$('#successMessage').hide();
-		$('#successMessage').css({
-			left: '580px',
-			top: '250px',
-			width: 0,
-			height: 0
-		});
-	}//end of init function
+		hideSuccessMessage();
+	}
 
 	function lines() {
 		$('#cardPile').empty();
@@ -90,14 +92,8 @@ $(document).ready(function() {
 		$('#cardPile img').shuffle();
 		setUpDrag();
 		correctCards = 0;
-		$('#successMessage').hide();
-		$('#successMessage').css({
-			left: '580px',
-			top: '250px',
-			width: 0,
-			height: 0
-		});
-	} //end of lines function
+		hideSuccessMessage();
+	} 
 
 	function spaces() {
 		$('#cardPile').empty();
@@ -107,15 +103,10 @@ $(document).ready(function() {
 		$('#cardPile img').shuffle();
 		setUpDrag();
 		correctCards = 0;
-		$('#successMessage').hide();
-		$('#successMessage').css({
-			left: '580px',
-			top: '250px',
-			width: 0,
-			height: 0
-		});
-	} //end of spaces function
+		hideSuccessMessage();
+	} 
 	
+	//click handlers
 	$("#default-button").click(init);
 				
 	$("#lines-button").click(lines);
