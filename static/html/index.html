@@ -12,7 +12,12 @@
 		<p>Place (drag) each note card on top of its matching letter card below.</p>
 		<div id="note-game-content">
 		
-			<!--set of images used for default setting-->
+			<div id="successMessage">
+		       <h2 id="correct">All correct!</h2>
+		       <h3>(Click a setting below to play again.)</h3>
+			</div>
+		
+		  <!--set of images used for default setting-->
 			<div id="defaultCardPile" class="hidden">
 				<img data-title="C" src="/static/img/C4Front.png" />
 		    	<img data-title="D" src="/static/img/D4Front.png" />
@@ -74,10 +79,7 @@
 		    <!--this is lower div, set of cards with letters showing, populated by init()-->
 		    <div id="cardSlots"></div>
 		
-		  <div id="successMessage">
-		       <h2 id="correct">All correct!</h2>
-		  </div>
-		  
+		  		  
 		  <button type="button" id="default-button">Default Notes</button>
 		  <button type="button" id="lines-button">Line Notes</button>
 		  <button type="button" id="spaces-button">Space Notes</button>

@@ -67,43 +67,46 @@ $(document).ready(function() {
 				left: '380px',
 				top: '200px',
 				width: '400px',
-				height: '100px',
+				height: '80px',
 				opacity: 1
 			});
 		}
 	}
-
-	function init() {
+	
+	function emptyCards(){
 		$('#cardPile').empty();
 		$('#cardSlots').empty();
-		$('#defaultCardPile img').clone().appendTo('#cardPile');
-		$('#defaultCardSlots img').clone().appendTo('#cardSlots');
+	}
+	
+	function startGame(){
 		$('#cardPile img').shuffle();
 		setUpDrag();
 		correctCards = 0;
 		hideSuccessMessage();
 	}
 
+	//default notes (C,D,E,F,G)
+	function init() {
+		emptyCards();
+		$('#defaultCardPile img').clone().appendTo('#cardPile');
+		$('#defaultCardSlots img').clone().appendTo('#cardSlots');
+		startGame();
+	}
+
+	//lines-only notes (C,E,G,B,D)
 	function lines() {
-		$('#cardPile').empty();
-		$('#cardSlots').empty();
+		emptyCards();
 		$('#linesCardPile img').clone().appendTo('#cardPile');
 		$('#linesCardSlots img').clone().appendTo('#cardSlots');
-		$('#cardPile img').shuffle();
-		setUpDrag();
-		correctCards = 0;
-		hideSuccessMessage();
+		startGame();
 	} 
-
+	
+	//spaces-only notes (D,F,A,C,E)
 	function spaces() {
-		$('#cardPile').empty();
-		$('#cardSlots').empty();
+		emptyCards();
 		$('#spacesCardPile img').clone().appendTo('#cardPile');
 		$('#spacesCardSlots img').clone().appendTo('#cardSlots');
-		$('#cardPile img').shuffle();
-		setUpDrag();
-		correctCards = 0;
-		hideSuccessMessage();
+		startGame();
 	} 
 	
 	//click handlers
