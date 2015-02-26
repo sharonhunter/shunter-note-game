@@ -48,7 +48,7 @@ $(document).ready(function() {
 				at: 'left top'
 			});
 			ui.draggable.draggable('option', 'revert', false);
-			$(this).droppable('disable').addClass('green_glow');
+			$(this).droppable('disable').addClass('glow');
 			correctCards++;
 		}
 		if (correctCards == 5) {

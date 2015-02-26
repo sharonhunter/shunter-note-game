@@ -1,5 +1,7 @@
-body { background-image: url(/static/img/mochaGrunge.png);}
-
+body { 
+	/* background-image: url(/static/img/mochaGrunge.png); */
+	background-color:#8ca9b9;
+}
 
 #card_game_container {
 	padding-top:20px;
@@ -22,7 +24,7 @@ h1, h2, p {
 	color:#fff;
 }
 
-.title { color:#fff; }
+.title { color:#444; }
 
 h1.title {
 	padding:0px;
@@ -33,32 +35,37 @@ p.title {
 	font-size:1.1em;
 }
 
-.green_glow {
-	-moz-box-shadow: inset 0 0 4px 4px #49E20E;
-	-webkit-box-shadow: inset 0 0 4px 4px #49E20E;
-	box-shadow: inset 0 0 4px 4px #49E20E;
+.glow {
+	-moz-box-shadow: inset 0 0 4px 4px #36648B;
+	-webkit-box-shadow: inset 0 0 4px 4px #36648B ;
+	box-shadow: inset 0 0 4px 4px #36648B;
 }
 
 #successMessage {
-	margin:0px auto;
 	position:absolute;
-	top:150px;
-	left:410px;
-	width:350px;
-	background-color: #fff;
-	border: 6px ridge #999;
+	top:40px;
+	left:34%;
+	width:32%;
+	background-color: #FFFFAA;
+	border: 2px solid #555;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
 	color:#333;
 }
 
 #successMessage h2, #successMessage p {
-	color:#333;
+	color:#fff;
+	color:#555;
 }
 
 #successMessage h2 { 
 	padding-top:3px;
 	margin-bottom: -10px;
+	font-weight: 600;
+}
+
+#note-game-content {
+	position:relative;
 }
 
 #note-game-content img {
@@ -69,9 +76,8 @@ p.title {
 	height:40px;
 	width:145px;
 	font-size:0.9em;
-	color:#333;
+	color:#555;
 	border-radius: 5px;
-	/* background-color:#C3E4ED; */
 	background-color: #FFFFAA;
 	margin-top:12px;
 	margin-right:2px;
