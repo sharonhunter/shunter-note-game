@@ -37,16 +37,6 @@ $(document).ready(function() {
 		});
 	}
 		
-	function hideSuccessMessage(){
-		$('#successMessage').hide();
-		$('#successMessage').css({
-			left: '580px',
-			top: '250px',
-			width: 0,
-			height: 0
-		});
-	}
-	
 	function handleCardDrop(event, ui) {
 		var slotLetter = $(this).attr('data-title');
 		var cardLetter = ui.draggable.attr('data-title');
@@ -62,14 +52,7 @@ $(document).ready(function() {
 			correctCards++;
 		}
 		if (correctCards == 5) {
-			$('#successMessage').show();
-			$('#successMessage').animate({
-				left: '380px',
-				top: '200px',
-				width: '400px',
-				height: '80px',
-				opacity: 1
-			});
+			$('#successMessage').slideDown("1500");
 		}
 	}
 	
@@ -82,7 +65,7 @@ $(document).ready(function() {
 		$('#cardPile img').shuffle();
 		setUpDrag();
 		correctCards = 0;
-		hideSuccessMessage();
+		$('#successMessage').hide();
 	}
 
 	//default notes (C,D,E,F,G)
@@ -111,7 +94,7 @@ $(document).ready(function() {
 	
 	//click handlers
 	$("#default-button").click(init);
-				
+	
 	$("#lines-button").click(lines);
 			
 	$("#spaces-button").click(spaces);

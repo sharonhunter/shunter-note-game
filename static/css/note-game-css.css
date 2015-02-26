@@ -16,26 +16,21 @@ body { background-image: url(/static/img/mochaGrunge.png);}
 	display:none;
 }
 
-h2, p {
+h1, h2, p {
 	font-family: 'Roboto', sans-serif;
 	font-weight:300;
 	color:#fff;
 }
 
-h3 {
-	font-family: 'Roboto', sans-serif;
-	font-weight:300;
-	color:#333;
-}
+.title { color:#fff; }
 
-#note-game-title {
-	margin-bottom:-10px;
-}
-
-#correct {
-	color:#333;
+h1.title {
 	padding:0px;
-	margin:10px 0px 0px 10px;
+}
+
+p.title { 
+	margin: -10px 0px 25px 0px;
+	font-size:1.1em;
 }
 
 .green_glow {
@@ -45,25 +40,41 @@ h3 {
 }
 
 #successMessage {
-	background-color: #f5f5f5;
-	padding: 10px;
-	border: 1px solid #333;
+	margin:0px auto;
+	position:absolute;
+	top:150px;
+	left:410px;
+	width:350px;
+	background-color: #fff;
+	border: 6px ridge #999;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
-	margin:15px auto;
+	color:#333;
+}
+
+#successMessage h2, #successMessage p {
+	color:#333;
+}
+
+#successMessage h2 { 
+	padding-top:3px;
+	margin-bottom: -10px;
 }
 
 #note-game-content img {
 	border-radius:8px;
 }
 
-#note-game-button {
+#default-button, #lines-button, #spaces-button {
 	height:40px;
-	width:140px;
-	font-size:1em;
+	width:145px;
+	font-size:0.9em;
 	color:#333;
 	border-radius: 5px;
-	background-color:#C3E4ED;
-	margin-top:10px;
+	/* background-color:#C3E4ED; */
+	background-color: #FFFFAA;
+	margin-top:12px;
+	margin-right:2px;
+	text-transform: uppercase;
 }
 
