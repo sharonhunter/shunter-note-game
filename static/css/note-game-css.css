@@ -18,7 +18,7 @@ body {
 	display:none;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
 	font-family: 'Roboto', sans-serif;
 	font-weight:300;
 	color:#fff;
@@ -46,22 +46,20 @@ p.title {
 	top:40px;
 	left:34%;
 	width:32%;
-	background-color: #FFFFAA;
-	border: 2px solid #555;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
 	color:#333;
 }
 
-#successMessage h2, #successMessage p {
+#successMessage h1 { 
+	padding-top:3px;
+	margin-bottom:-10px;
+	font-weight:600;
 	color:#fff;
-	color:#555;
 }
 
-#successMessage h2 { 
-	padding-top:3px;
-	margin-bottom: -10px;
-	font-weight: 600;
+#successMessage h3 {
+	font-weight:300;
+	margin-top:8px;
+	color:#fff;
 }
 
 #note-game-content {
