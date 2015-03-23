@@ -76,7 +76,7 @@ $(document).ready(function() {
 		startGame();
 	}
 
-	//lines-only notes (C,E,G,B,D)
+	//lines-only notes (E,G,B,D,F)
 	function lines() {
 		emptyCards();
 		$('#linesCardPile img').clone().appendTo('#cardPile');
